@@ -1,0 +1,744 @@
+[
+  {
+    "success": true,
+    "symbol": "RELIANCE",
+    "name": "Reliance Industries",
+    "sector": "Oil & Gas Operations",
+    "price": "1489.30"
+  },
+  {
+    "success": true,
+    "symbol": "TCS",
+    "name": "Tata Consultancy Services",
+    "sector": "Software & Programming",
+    "price": "3025.20"
+  },
+  {
+    "success": true,
+    "symbol": "HDFCBANK",
+    "name": "HDFC Bank",
+    "sector": "Regional Banks",
+    "price": "984.50"
+  },
+  {
+    "success": true,
+    "symbol": "INFY",
+    "name": "Infosys",
+    "sector": "Software & Programming",
+    "price": "1513.50"
+  },
+  {
+    "success": true,
+    "symbol": "ICICIBANK",
+    "name": "ICICI Bank",
+    "sector": "Regional Banks",
+    "price": "1348.00"
+  },
+  {
+    "success": true,
+    "symbol": "HINDUNILVR",
+    "name": "Hindustan Unilever",
+    "sector": "Personal & Household Prods.",
+    "price": "2408.80"
+  },
+  {
+    "success": true,
+    "symbol": "ITC",
+    "name": "ITC",
+    "sector": "Tobacco",
+    "price": "405.55"
+  },
+  {
+    "success": true,
+    "symbol": "SBIN",
+    "name": "State Bank of India",
+    "sector": "Regional Banks",
+    "price": "951.15"
+  },
+  {
+    "success": true,
+    "symbol": "BHARTIARTL",
+    "name": "Bharti Airtel",
+    "sector": "Communications Services",
+    "price": "2019.80"
+  },
+  {
+    "success": true,
+    "symbol": "KOTAKBANK",
+    "name": "Kotak Mahindra Bank",
+    "sector": "Regional Banks",
+    "price": "2092.70"
+  },
+  {
+    "success": true,
+    "symbol": "LT",
+    "name": "LTIMindtree",
+    "sector": "Software & Programming",
+    "price": "5650.00"
+  },
+  {
+    "success": true,
+    "symbol": "AXISBANK",
+    "name": "Axis Bank",
+    "sector": "Regional Banks",
+    "price": "1217.00"
+  },
+  {
+    "success": true,
+    "symbol": "ASIANPAINT",
+    "name": "Asian Paints",
+    "sector": "Chemical Manufacturing",
+    "price": "2650.40"
+  },
+  {
+    "success": true,
+    "symbol": "MARUTI",
+    "name": "Maruti Suzuki India",
+    "sector": "Auto & Truck Manufacturers",
+    "price": "15583.00"
+  },
+  {
+    "success": true,
+    "symbol": "TITAN",
+    "name": "Titan Company",
+    "sector": "Jewelry & Silverware",
+    "price": "3803.00"
+  },
+  {
+    "success": true,
+    "symbol": "SUNPHARMA",
+    "name": "Sun Pharmaceutical Industries",
+    "sector": "Biotechnology & Drugs",
+    "price": "1697.80"
+  },
+  {
+    "success": true,
+    "symbol": "BAJFINANCE",
+    "name": "Bajaj Finance",
+    "sector": "Consumer Financial Services",
+    "price": "1085.00"
+  },
+  {
+    "success": true,
+    "symbol": "ULTRACEMCO",
+    "name": "UltraTech Cement",
+    "sector": "Construction - Raw Materials",
+    "price": "11728.00"
+  },
+  {
+    "success": true,
+    "symbol": "NESTLEIND",
+    "name": "Nestle India",
+    "sector": "Food Processing",
+    "price": "1262.90"
+  },
+  {
+    "success": true,
+    "symbol": "WIPRO",
+    "name": "Wipro",
+    "sector": "Computer Services",
+    "price": "239.84"
+  },
+  {
+    "success": true,
+    "symbol": "ADANIENT",
+    "name": "Adani Enterprises",
+    "sector": "Coal",
+    "price": "2370.70"
+  },
+  {
+    "success": true,
+    "symbol": "HCLTECH",
+    "name": "HCL Technologies",
+    "sector": "Software & Programming",
+    "price": "1540.50"
+  },
+  {
+    "success": true,
+    "symbol": "TATAMOTORS",
+    "name": "Tata Motors Passenger Vhcls",
+    "sector": "Auto & Truck Manufacturers",
+    "price": "410.45"
+  },
+  {
+    "success": true,
+    "symbol": "ONGC",
+    "name": "Oil and Natural Gas Corporation",
+    "sector": "Oil & Gas Operations",
+    "price": "251.40"
+  },
+  {
+    "success": true,
+    "symbol": "NTPC",
+    "name": "NTPC",
+    "sector": "Electric Utilities",
+    "price": "325.45"
+  },
+  {
+    "success": true,
+    "symbol": "M&M",
+    "name": "Maruti Suzuki India",
+    "sector": "Auto & Truck Manufacturers",
+    "price": "15583.00"
+  },
+  {
+    "success": true,
+    "symbol": "TECHM",
+    "name": "Tech Mahindra",
+    "sector": "Software & Programming",
+    "price": "1397.80"
+  },
+  {
+    "success": true,
+    "symbol": "TATASTEEL",
+    "name": "Tata Steel",
+    "sector": "Iron & Steel",
+    "price": "181.48"
+  },
+  {
+    "success": true,
+    "symbol": "POWERGRID",
+    "name": "Power Grid Corporation of India",
+    "sector": "Electric Utilities",
+    "price": "268.20"
+  },
+  {
+    "success": true,
+    "symbol": "BAJAJFINSV",
+    "name": "Bajaj Finserv",
+    "sector": "Insurance (Life)",
+    "price": "2118.30"
+  },
+  {
+    "success": true,
+    "symbol": "ADANIPORTS",
+    "name": "Adani Ports and Special Economic Zone",
+    "sector": "Misc. Transportation",
+    "price": "1444.90"
+  },
+  {
+    "success": true,
+    "symbol": "COALINDIA",
+    "name": "Coal India",
+    "sector": "Coal",
+    "price": "381.35"
+  },
+  {
+    "success": true,
+    "symbol": "JSWSTEEL",
+    "name": "JSW Steel",
+    "sector": "Iron & Steel",
+    "price": "1179.30"
+  },
+  {
+    "success": true,
+    "symbol": "GRASIM",
+    "name": "Grasim Industries",
+    "sector": "Construction - Raw Materials",
+    "price": "2762.90"
+  },
+  {
+    "success": true,
+    "symbol": "INDUSINDBK",
+    "name": "Indusind Bank",
+    "sector": "Regional Banks",
+    "price": "799.35"
+  },
+  {
+    "success": true,
+    "symbol": "BRITANNIA",
+    "name": "Britannia Industries",
+    "sector": "Food Processing",
+    "price": "6133.50"
+  },
+  {
+    "success": true,
+    "symbol": "HINDALCO",
+    "name": "Hindalco Industries",
+    "sector": "Metal Mining",
+    "price": "785.20"
+  },
+  {
+    "success": true,
+    "symbol": "HEROMOTOCO",
+    "name": "Hero Motocorp",
+    "sector": "Recreational Products",
+    "price": "5359.50"
+  },
+  {
+    "success": true,
+    "symbol": "EICHERMOT",
+    "name": "Eicher Motors",
+    "sector": "Recreational Products",
+    "price": "6866.50"
+  },
+  {
+    "success": true,
+    "symbol": "CIPLA",
+    "name": "Cipla",
+    "sector": "Biotechnology & Drugs",
+    "price": "1511.50"
+  },
+  {
+    "success": true,
+    "symbol": "TATACONSUM",
+    "name": "Tata Consumer Products",
+    "sector": "Food Processing",
+    "price": "1142.70"
+  },
+  {
+    "success": true,
+    "symbol": "APOLLOHOSP",
+    "name": "Apollo Hospitals Enterprise",
+    "sector": "Healthcare Facilities",
+    "price": "7529.50"
+  },
+  {
+    "success": true,
+    "symbol": "BAJAJ-AUTO",
+    "name": "Bajaj Auto",
+    "sector": "Recreational Products",
+    "price": "8772.00"
+  },
+  {
+    "success": true,
+    "symbol": "SBILIFE",
+    "name": "Sbi Life Insurance Company",
+    "sector": "Insurance (Life)",
+    "price": "1990.30"
+  },
+  {
+    "success": true,
+    "symbol": "BPCL",
+    "name": "BPL",
+    "sector": "Appliance & Tool",
+    "price": "70.49"
+  },
+  {
+    "success": true,
+    "symbol": "UPL",
+    "name": "UPL",
+    "sector": "Chemical Manufacturing",
+    "price": "750.65"
+  },
+  {
+    "success": true,
+    "symbol": "SHREECEM",
+    "name": "Shree Cement",
+    "sector": "Construction - Raw Materials",
+    "price": "27090.00"
+  },
+  {
+    "success": true,
+    "symbol": "TRENT",
+    "name": "Trent",
+    "sector": "Retail (Apparel)",
+    "price": "4283.70"
+  },
+  {
+    "success": true,
+    "symbol": "ADANIGREEN",
+    "name": "Adani Green Energy",
+    "sector": "Electric Utilities",
+    "price": "1041.30"
+  },
+  {
+    "success": true,
+    "symbol": "ADANIPOWER",
+    "name": "Adani Power",
+    "sector": "Electric Utilities",
+    "price": "150.06"
+  },
+  {
+    "success": true,
+    "symbol": "ATGL",
+    "name": "Atul",
+    "sector": "Chemical Manufacturing",
+    "price": "5715.00"
+  },
+  {
+    "success": true,
+    "symbol": "BANKBARODA",
+    "name": "Bank of Baroda",
+    "sector": "Regional Banks",
+    "price": "287.70"
+  },
+  {
+    "success": true,
+    "symbol": "BERGEPAINT",
+    "name": "Berger Paints India",
+    "sector": "Chemical Manufacturing",
+    "price": "535.60"
+  },
+  {
+    "success": true,
+    "symbol": "BOSCHLTD",
+    "name": "Bosch",
+    "sector": "Auto & Truck Parts",
+    "price": "37200.00"
+  },
+  {
+    "success": true,
+    "symbol": "CANBK",
+    "name": "Canara Bank",
+    "sector": "Regional Banks",
+    "price": "141.04"
+  },
+  {
+    "success": true,
+    "symbol": "CHOLAFIN",
+    "name": "Cholamandalam Investment and Fin Co",
+    "sector": "Consumer Financial Services",
+    "price": "1754.40"
+  },
+  {
+    "success": true,
+    "symbol": "COLPAL",
+    "name": "Colgate-Palmolive (India)",
+    "sector": "Personal & Household Prods.",
+    "price": "2171.20"
+  },
+  {
+    "success": true,
+    "symbol": "DABUR",
+    "name": "Dabur India",
+    "sector": "Personal & Household Prods.",
+    "price": "515.85"
+  },
+  {
+    "success": true,
+    "symbol": "DLF",
+    "name": "DLF",
+    "sector": "Construction Services",
+    "price": "760.00"
+  },
+  {
+    "success": true,
+    "symbol": "GAIL",
+    "name": "Gail (India)",
+    "sector": "Natural Gas Utilities",
+    "price": "181.52"
+  },
+  {
+    "success": true,
+    "symbol": "GODREJCP",
+    "name": "Godrej Consumer Products",
+    "sector": "Personal & Household Prods.",
+    "price": "1126.70"
+  },
+  {
+    "success": true,
+    "symbol": "HDFCLIFE",
+    "name": "HDFC Life Insurance Company",
+    "sector": "Insurance (Life)",
+    "price": "750.70"
+  },
+  {
+    "success": true,
+    "symbol": "HAVELLS",
+    "name": "Havells India",
+    "sector": "Misc. Fabricated Products",
+    "price": "1457.70"
+  },
+  {
+    "success": true,
+    "symbol": "ICICIPRULI",
+    "name": "Icici Prudential Life Insurance Comp",
+    "sector": "Insurance (Life)",
+    "price": "614.80"
+  },
+  {
+    "success": true,
+    "symbol": "INDIGO",
+    "name": "Indigo Paints",
+    "sector": "Chemical Manufacturing",
+    "price": "1155.35"
+  },
+  {
+    "success": true,
+    "symbol": "IOC",
+    "name": "ITC",
+    "sector": "Tobacco",
+    "price": "405.55"
+  },
+  {
+    "success": true,
+    "symbol": "JINDALSTEL",
+    "name": "Jindal Steel",
+    "sector": "Iron & Steel",
+    "price": "1071.40"
+  },
+  {
+    "success": true,
+    "symbol": "LTIM",
+    "name": "LTIMindtree",
+    "sector": "Software & Programming",
+    "price": "5650.00"
+  },
+  {
+    "success": true,
+    "symbol": "LUPIN",
+    "name": "Lupin",
+    "sector": "Biotechnology & Drugs",
+    "price": "1990.20"
+  },
+  {
+    "success": true,
+    "symbol": "MARICO",
+    "name": "Marico",
+    "sector": "Personal & Household Prods.",
+    "price": "719.25"
+  },
+  {
+    "success": true,
+    "symbol": "MPHASIS",
+    "name": "Mphasis",
+    "sector": "Software & Programming",
+    "price": "2776.20"
+  },
+  {
+    "success": true,
+    "symbol": "NMDC",
+    "name": "NMDC",
+    "sector": "Metal Mining",
+    "price": "75.08"
+  },
+  {
+    "success": true,
+    "symbol": "NYKAA",
+    "name": "Fsn E-Commerce Ventures",
+    "sector": "Retail (Catalog & Mail Order)",
+    "price": "260.82"
+  },
+  {
+    "success": true,
+    "symbol": "PAGEIND",
+    "name": "Page Industries",
+    "sector": "Apparel/Accessories",
+    "price": "40065.00"
+  },
+  {
+    "success": true,
+    "symbol": "PERSISTENT",
+    "name": "Persistent Systems",
+    "sector": "Software & Programming",
+    "price": "5864.50"
+  },
+  {
+    "success": true,
+    "symbol": "PETRONET",
+    "name": "Petronet LNG",
+    "sector": "Oil & Gas Operations",
+    "price": "277.65"
+  },
+  {
+    "success": true,
+    "symbol": "PNB",
+    "name": "PNB Housing Finance",
+    "sector": "Consumer Financial Services",
+    "price": "898.95"
+  },
+  {
+    "success": true,
+    "symbol": "PFC",
+    "name": "Power Finance Corporation",
+    "sector": "Consumer Financial Services",
+    "price": "377.30"
+  },
+  {
+    "success": true,
+    "symbol": "RECLTD",
+    "name": "REC",
+    "sector": "Misc. Financial Services",
+    "price": "362.40"
+  },
+  {
+    "success": true,
+    "symbol": "SBICARD",
+    "name": "SBI Cards and Payment Services",
+    "sector": "Consumer Financial Services",
+    "price": "875.05"
+  },
+  {
+    "success": true,
+    "symbol": "SIEMENS",
+    "name": "Siemens Energy India",
+    "sector": "Energy Technology",
+    "price": "3282.10"
+  },
+  {
+    "success": true,
+    "symbol": "TORNTPHARM",
+    "name": "Torrent Pharmaceuticals",
+    "sector": "Biotechnology & Drugs",
+    "price": "3817.50"
+  },
+  {
+    "success": true,
+    "symbol": "TVSMOTOR",
+    "name": "TVS Motor Company",
+    "sector": "Recreational Products",
+    "price": "3490.80"
+  },
+  {
+    "success": true,
+    "symbol": "VEDL",
+    "name": "Vedanta",
+    "sector": "Metal Mining",
+    "price": "519.60"
+  },
+  {
+    "success": true,
+    "symbol": "VOLTAS",
+    "name": "Voltas",
+    "sector": "Misc. Capital Goods",
+    "price": "1340.70"
+  },
+  {
+    "success": true,
+    "symbol": "ZYDUSLIFE",
+    "name": "Zydus Lifesciences",
+    "sector": "Biotechnology & Drugs",
+    "price": "948.40"
+  },
+  {
+    "success": true,
+    "symbol": "AMBUJACEM",
+    "name": "Ambuja Cements",
+    "sector": "Construction - Raw Materials",
+    "price": "556.10"
+  },
+  {
+    "success": true,
+    "symbol": "ACC",
+    "name": "ACC",
+    "sector": "Construction - Raw Materials",
+    "price": "1845.00"
+  },
+  {
+    "success": true,
+    "symbol": "BIOCON",
+    "name": "Biocon",
+    "sector": "Biotechnology & Drugs",
+    "price": "382.15"
+  },
+  {
+    "success": true,
+    "symbol": "GODREJPROP",
+    "name": "Godrej Properties",
+    "sector": "Construction Services",
+    "price": "2167.70"
+  },
+  {
+    "success": true,
+    "symbol": "HINDZINC",
+    "name": "Hindustan Zinc",
+    "sector": "Metal Mining",
+    "price": "484.60"
+  },
+  {
+    "success": true,
+    "symbol": "IDFC",
+    "name": "IDFC First Bank",
+    "sector": "Regional Banks",
+    "price": "81.21"
+  },
+  {
+    "success": true,
+    "symbol": "IDFCFIRSTB",
+    "name": "IDFC First Bank",
+    "sector": "Regional Banks",
+    "price": "81.21"
+  },
+  {
+    "success": true,
+    "symbol": "IRCTC",
+    "name": "Indian Railway Ctrng nd Trsm Corp",
+    "sector": "Personal Services",
+    "price": "704.35"
+  },
+  {
+    "success": true,
+    "symbol": "JUBLFOOD",
+    "name": "Jubilant FoodWorks",
+    "sector": "Restaurants",
+    "price": "587.00"
+  },
+  {
+    "success": true,
+    "symbol": "NATIONALUM",
+    "name": "National Aluminium Co",
+    "sector": "Metal Mining",
+    "price": "257.36"
+  },
+  {
+    "success": true,
+    "symbol": "OBEROIRLTY",
+    "name": "Oberoi Realty",
+    "sector": "Construction Services",
+    "price": "1788.00"
+  },
+  {
+    "success": true,
+    "symbol": "PAYTM",
+    "name": "One 97 Communications",
+    "sector": "Consumer Financial Services",
+    "price": "1330.70"
+  },
+  {
+    "success": true,
+    "symbol": "PEL",
+    "name": "Pelatro",
+    "sector": "Software & IT Services",
+    "price": "376.60"
+  },
+  {
+    "success": true,
+    "symbol": "PIIND",
+    "name": "PI Industries",
+    "sector": "Chemical Manufacturing",
+    "price": "3820.50"
+  },
+  {
+    "success": true,
+    "symbol": "SAIL",
+    "name": "Sai Life Sciences",
+    "sector": "Chemical Manufacturing",
+    "price": "907.05"
+  },
+  {
+    "success": true,
+    "symbol": "TATAELXSI",
+    "name": "Tata Elxsi",
+    "sector": "Software & Programming",
+    "price": "5207.00"
+  },
+  {
+    "success": true,
+    "symbol": "TATAPOWER",
+    "name": "Tata Power Company",
+    "sector": "Electric Utilities",
+    "price": "395.85"
+  },
+  {
+    "success": true,
+    "symbol": "YESBANK",
+    "name": "Yes Bank",
+    "sector": "Regional Banks",
+    "price": "22.74"
+  },
+  {
+    "success": true,
+    "symbol": "ASHOKLEY",
+    "name": "Ashok Leyland",
+    "sector": "Auto & Truck Manufacturers",
+    "price": "142.28"
+  },
+  {
+    "success": true,
+    "symbol": "AUROPHARMA",
+    "name": "Aurobindo Pharma",
+    "sector": "Major Drugs",
+    "price": "1154.80"
+  }
+]

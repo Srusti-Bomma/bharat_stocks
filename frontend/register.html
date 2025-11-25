@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Bharat Stocks </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md fade-in">
+        <!-- Logo/Header -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center mb-2">
+                <img src="logo.png" alt="Bharat Stocks Logo" class="h-16 w-16 mr-4 rounded-lg">
+                <h1 class="text-5xl font-bold text-blue-500">Bharat Stocks</h1>
+            </div>
+            <p class="text-gray-400">Create your account</p>
+        </div>
+
+        <!-- Register Card -->
+        <div class="bg-slate-800 rounded-2xl shadow-2xl p-8">
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">Register</h2>
+            
+            <!-- Error Message -->
+            <div id="error-message" class="hidden bg-red-500/20 border border-red-500 text-red-500 px-4 py-3 rounded-lg mb-4"></div>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                        placeholder="Enter your full name"
+                    >
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-2">Username <span class="text-red-500">*</span></label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        required
+                        minlength="3"
+                        class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                        placeholder="Choose a username"
+                    >
+                    <p class="text-xs text-gray-500 mt-1">At least 3 characters, alphanumeric</p>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-2">Email <span class="text-red-500">*</span></label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        required
+                        class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                        placeholder="Enter your email"
+                    >
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-300 mb-2">Password <span class="text-red-500">*</span></label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        required
+                        minlength="5"
+                        class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                        placeholder="Create a password"
+                    >
+                    <p class="text-xs text-gray-500 mt-1">At least 5 characters</p>
+                </div>
+
+                <button 
+                    type="submit" 
+                    id="registerBtn"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition duration-200 flex items-center justify-center mt-6"
+                >
+                    <span id="registerText">Create Account</span>
+                    <div id="registerSpinner" class="hidden spinner ml-2 w-5 h-5"></div>
+                </button>
+            </form>
+
+            <!-- Divider -->
+            <div class="flex items-center my-6">
+                <div class="flex-1 border-t border-slate-700"></div>
+                <span class="px-4 text-sm text-gray-400">OR</span>
+                <div class="flex-1 border-t border-slate-700"></div>
+            </div>
+
+            <!-- Google Sign-In Button -->
+            <div class="flex justify-center">
+                <div id="g_id_onload"
+                    data-client_id="942404260343-kdvcoueujstp21nlj5shpeof85d1707o.apps.googleusercontent.com"
+                    data-callback="handleGoogleLogin"
+                    data-auto_prompt="false">
+                </div>
+            </div>
+            <div class="g_id_signin flex justify-center mt-4" data-type="standard" data-size="large" data-theme="outline" data-text="continue_with" data-shape="pill" data-logo_alignment="left" data-width="360"></div>
+
+            <!-- Login Link -->
+            <div class="mt-6 text-center">
+                <p class="text-gray-400">
+                    Already have an account? 
+                    <a href="index.html" class="text-blue-500 hover:text-blue-400 font-semibold">Login</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>© 2025 Bharat Stocks. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        // Redirect if already logged in
+        if (Auth.isAuthenticated()) {
+            window.location.href = 'dashboard_cards.html';
+        }
+
+        // Google Login Handler
+        async function handleGoogleLogin(response) {
+            try {
+                try { if (window.resolveApiBase) await window.resolveApiBase(); } catch(e){}
+                const base = (window.API_URL || localStorage.getItem('api_base_url') || '').replace(/\/$/,'');
+                const res = await fetch(`${base}/auth/google`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ credential: response.credential })
+                });
+
+                if (!res.ok) {
+                    const error = await res.json();
+                    throw new Error(error.detail || 'Google signup failed');
+                }
+
+                const data = await res.json();
+                Auth.setToken(data.access_token);
+                Auth.setUser(data.user);
+                window.location.href = 'dashboard_cards.html';
+            } catch (error) {
+                showError('error-message', error.message);
+            }
+        }
+
+        window.onload = function() {
+            const onloadDiv = document.getElementById('g_id_onload');
+            const clientId = onloadDiv?.getAttribute('data-client_id') || onloadDiv?.dataset?.client_id;
+            if (window.google && window.google.accounts && window.google.accounts.id && clientId) {
+                google.accounts.id.initialize({ client_id: clientId, callback: handleGoogleLogin, ux_mode: 'popup' });
+                // g_id_signin will auto-render with theme outline
+            }
+        }
+
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const password = document.getElementById('password').value;
+            const fullName = document.getElementById('fullName').value.trim();
+            const registerBtn = document.getElementById('registerBtn');
+            const registerText = document.getElementById('registerText');
+            const registerSpinner = document.getElementById('registerSpinner');
+            
+            // Show loading state
+            registerBtn.disabled = true;
+            registerText.textContent = 'Creating Account...';
+            registerSpinner.classList.remove('hidden');
+            
+            // Attempt registration (ensure same-host base)
+            try { if (window.resolveApiBase) await window.resolveApiBase(); } catch(e){}
+            const result = await register(username, email, password, fullName);
+            
+            if (result.success) {
+                window.location.href = 'dashboard_cards.html';
+            } else {
+                showError('error-message', result.error);
+                registerBtn.disabled = false;
+                registerText.textContent = 'Create Account';
+                registerSpinner.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

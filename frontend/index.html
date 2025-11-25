@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Bharat Stocks </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md fade-in">
+        <!-- Logo/Header -->
+        <div class="text-center mb-8">
+            <div class="flex items-center justify-center mb-2">
+                <img src="logo.png" alt="Bharat Stocks Logo" class="h-16 w-16 mr-4 rounded-lg">
+                <h1 class="text-5xl font-bold text-blue-500">Bharat Stocks</h1>
+            </div>
+            <p class="text-gray-400">Real-time Indian Stock Market Analytics Platform</p>
+        </div>
+
+        <!-- Login Card -->
+        <div class="bg-slate-800 rounded-2xl shadow-2xl p-8">
+            <h2 class="text-2xl font-bold mb-6 text-center text-white">Welcome Back</h2>
+            
+            <!-- Error Message -->
+            <div id="error-message" class="hidden bg-red-500/20 border border-red-500 text-red-500 px-4 py-3 rounded-lg mb-4">
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="space-y-4">
+                <div class="flex items-center justify-between mb-2">
+                    <label class="block text-sm font-medium text-gray-300">Email or Username</label>
+                    <button type="button" id="adminToggle" class="text-xs px-2 py-1 rounded bg-slate-700 hover:bg-slate-600 text-gray-200">Admin login</button>
+                </div>
+                <div>
+                    <input 
+                        type="text" 
+                        id="identifier" 
+                        required
+                        class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                        placeholder="Enter email or username"
+                    >
+                </div>
+
+                <div class="mt-4">
+                    <label class="block text-sm font-medium text-gray-300 mb-2">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        required
+                        class="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
+                        placeholder="Enter your password"
+                    >
+                </div>
+
+                <button 
+                    type="submit" 
+                    id="loginBtn"
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition duration-200 flex items-center justify-center mt-4"
+                >
+                    <span id="loginText">Login</span>
+                    <div id="loginSpinner" class="hidden spinner ml-2 w-5 h-5"></div>
+                </button>
+                <p id="adminHint" class="mt-2 text-center text-xs text-gray-400 hidden">Admin mode enabled</p>
+            </form>
+
+            <!-- Divider -->
+            <div class="flex items-center my-6">
+                <div class="flex-1 border-t border-slate-700"></div>
+                <span class="px-4 text-sm text-gray-400">OR</span>
+                <div class="flex-1 border-t border-slate-700"></div>
+            </div>
+
+            <!-- Google Sign-In Button (custom style) -->
+            <div class="flex justify-center">
+                <div id="g_id_onload"
+                    data-client_id="942404260343-kdvcoueujstp21nlj5shpeof85d1707o.apps.googleusercontent.com"
+                    data-callback="handleGoogleLogin"
+                    data-auto_prompt="false">
+                </div>
+            </div>
+            <div class="g_id_signin flex justify-center mt-4" data-type="standard" data-size="large" data-theme="outline" data-text="continue_with" data-shape="pill" data-logo_alignment="left" data-width="360" ></div>
+
+            <!-- Register Link -->
+            <div class="mt-6 text-center">
+                <p class="text-gray-400">
+                    Don't have an account? 
+                    <a href="register.html" class="text-blue-500 hover:text-blue-400 font-semibold">Register</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="mt-8 text-center text-gray-500 text-sm">
+            <p>© 2025 Bharat Stocks. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script>
+        // Set API base to same host as frontend (port 8000), then resolve
+        (async ()=>{
+            try{
+                var sameHost = location.protocol + '//' + location.hostname + ':8000';
+                localStorage.setItem('api_base_url', sameHost);
+                window.API_URL = sameHost;
+                if (window.resolveApiBase) await window.resolveApiBase();
+            }catch(e){}
+        })();
+        if (Auth.isAuthenticated()) {
+            window.location.href = 'dashboard_cards.html';
+        }
+
+        // Google Login Handler
+        async function handleGoogleLogin(response) {
+            try {
+                // Resolve base for google login
+                try { if (window.resolveApiBase) await window.resolveApiBase(); } catch(e){}
+                const base = (window.API_URL || localStorage.getItem('api_base_url') || '').replace(/\/$/,'');
+                const res = await fetch(`${base}/auth/google`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ credential: response.credential })
+                });
+
+                if (!res.ok) {
+                    const error = await res.json();
+                    throw new Error(error.detail || 'Google login failed');
+                }
+
+                const data = await res.json();
+                Auth.setToken(data.access_token);
+                Auth.setUser(data.user);
+                window.location.href = 'dashboard_cards.html';
+            } catch (error) {
+                showError('error-message', error.message);
+            }
+        }
+
+        // Initialize Google button (outline pill)
+        window.onload = function() {
+            const onloadDiv = document.getElementById('g_id_onload');
+            const clientId = onloadDiv?.getAttribute('data-client_id') || onloadDiv?.dataset?.client_id;
+            if (window.google && window.google.accounts && window.google.accounts.id && clientId) {
+                google.accounts.id.initialize({ client_id: clientId, callback: handleGoogleLogin, ux_mode: 'popup' });
+                // The .g_id_signin element will auto-render with theme="outline" (transparent)
+            }
+        }
+
+        // Admin toggle
+        let adminMode = false;
+        document.getElementById('adminToggle').addEventListener('click', () => {
+            adminMode = !adminMode;
+            document.getElementById('adminHint').classList.toggle('hidden', !adminMode);
+            document.getElementById('loginText').textContent = adminMode ? 'Admin Login' : 'Login';
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const identifier = document.getElementById('identifier').value;
+            const password = document.getElementById('password').value;
+            const loginBtn = document.getElementById('loginBtn');
+            const loginText = document.getElementById('loginText');
+            const loginSpinner = document.getElementById('loginSpinner');
+            
+            // Show loading state
+            loginBtn.disabled = true;
+            loginText.textContent = adminMode ? 'Logging in as Admin...' : 'Logging in...';
+            loginSpinner.classList.remove('hidden');
+            
+            try {
+                // Ensure base resolved right before login
+                try { if (window.resolveApiBase) await window.resolveApiBase(); } catch(e){}
+                const result = await login(identifier, password, adminMode);
+                if (result.success) {
+                    window.location.href = 'dashboard_cards.html';
+                } else {
+                    showError('error-message', result.error || 'Login failed');
+                }
+            } catch(err) {
+                showError('error-message', err?.message || 'Failed to fetch');
+            } finally {
+                loginBtn.disabled = false;
+                loginText.textContent = adminMode ? 'Admin Login' : 'Login';
+                loginSpinner.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

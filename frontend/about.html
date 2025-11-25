@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Bharat Stocks </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="dark-mode min-h-screen">
+    <nav class="bg-slate-800 border-b border-slate-700 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="logo.png" alt="Bharat Stocks Logo" class="h-10 w-10 mr-3 rounded">
+                    <h1 class="text-3xl font-bold text-blue-500">Bharat Stocks</h1>
+                </div>
+                <div class="hidden md:flex space-x-4">
+<a href="dashboard_cards.html" class="px-3 py-2 rounded-lg nav-link text-gray-300 hover:bg-slate-700 transition">Dashboard</a>
+<a href="trending.html" class="px-3 py-2 rounded-lg nav-link text-gray-300 hover:bg-slate-700 transition">Trending</a>
+<a href="most-active.html" class="px-3 py-2 rounded-lg nav-link text-gray-300 hover:bg-slate-700 transition">Most Active</a>
+<a href="news.html" class="px-3 py-2 rounded-lg nav-link text-gray-300 hover:bg-slate-700 transition">News</a>
+<a href="powerbi.html" class="px-3 py-2 rounded-lg nav-link text-gray-300 hover:bg-slate-700 transition">Analytics</a>
+<a href="about.html" class="px-3 py-2 rounded-lg nav-link bg-blue-600 text-white font-medium">About</a>
+<a id="adminLink" href="admin.html" class="px-3 py-2 rounded-lg nav-link text-gray-300 hover:bg-slate-700 transition hidden">Admin</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="toggleTheme()" class="p-2 rounded-lg hover:bg-slate-700 transition" title="Toggle theme"><span id="themeIcon">🌙</span></button>
+                    <div class="hidden md:flex items-center space-x-3">
+                        <div class="relative" id="profileContainer">
+                            <button id="profileBtn" class="w-9 h-9 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 text-white font-semibold flex items-center justify-center shadow hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                <span id="avatarInitial">U</span>
+                            </button>
+                            <div id="profileMenu" class="absolute right-0 mt-2 w-56 bg-slate-800 border border-slate-700 rounded-xl shadow-xl py-2 hidden">
+                                <div id="profileIdentity" class="px-4 py-3 text-sm text-gray-200 border-b border-slate-700">User</div>
+                                <button id="logoutBtn" class="w-full text-left flex items-center gap-2 px-4 py-2 text-sm text-gray-200 hover:bg-slate-700">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h4a2 2 0 012 2v1"/></svg>
+                                    Logout
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="mb-6">
+            <h2 class="text-3xl font-bold text-white mb-2">About Bharat Stocks </h2>
+            <p class="text-gray-400">Project overview, technical details, and team information</p>
+        </div>
+
+        <!-- Project Overview -->
+        <section class="mb-6 bg-slate-800 rounded-xl p-6">
+            <h3 class="text-xl text-white font-semibold mb-4 flex items-center">
+                <i class="fas fa-info-circle mr-3 text-blue-500"></i>
+                Project Overview
+            </h3>
+            <div class="prose prose-invert max-w-none">
+                <p class="text-gray-300 text-lg leading-relaxed mb-4">
+                    <strong>Bharat Stocks </strong> is a comprehensive FastAPI backend with a static frontend solution designed specifically for the Indian stock market. Our platform provides real-time access to NSE (National Stock Exchange) stock data, advanced analytics, and intelligent market insights.
+                </p>
+                <p class="text-gray-300 leading-relaxed mb-4">
+                    Built with modern web technologies and scalable architecture, Bharat Stocks Insight delivers a seamless experience for both retail investors and financial professionals. We combine live market data, historical analysis, and trending insights to empower users with actionable intelligence.
+                </p>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section class="mb-6 bg-slate-800 rounded-xl p-6">
+            <h3 class="text-xl text-white font-semibold mb-4 flex items-center">
+                <i class="fas fa-star mr-3 text-yellow-500"></i>
+                Key Features
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700">
+                    <div class="text-green-500 text-xl mb-2">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Live Market Data</h4>
+                    <p class="text-gray-400 text-sm">Real-time NSE stock quotes, price movements, and volume analysis with sub-minute updates.</p>
+                </div>
+                
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700">
+                    <div class="text-blue-500 text-xl mb-2">
+                        <i class="fas fa-trending-up"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Trending Analysis</h4>
+                    <p class="text-gray-400 text-sm">Identify market trends, gainers, losers, and sector performance with advanced algorithms.</p>
+                </div>
+                
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700">
+                    <div class="text-purple-500 text-xl mb-2">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Most Active Stocks</h4>
+                    <p class="text-gray-400 text-sm">Track the most actively traded stocks by volume and trading frequency across NSE.</p>
+                </div>
+                
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700">
+                    <div class="text-orange-500 text-xl mb-2">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Market News</h4>
+                    <p class="text-gray-400 text-sm">Integrated news feed from reliable sources to keep you updated with market-moving events.</p>
+                </div>
+                
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700">
+                    <div class="text-red-500 text-xl mb-2">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Admin Dashboard</h4>
+                    <p class="text-gray-400 text-sm">Comprehensive admin panel for system monitoring, user management, and analytics.</p>
+                </div>
+                
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700">
+                    <div class="text-indigo-500 text-xl mb-2">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Data Analytics</h4>
+                    <p class="text-gray-400 text-sm">Historical data storage, performance metrics, and intelligent data ingestion system.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Architecture -->
+        <section class="mb-6 bg-slate-800 rounded-xl p-6">
+            <h3 class="text-xl text-white font-semibold mb-4 flex items-center">
+                <i class="fas fa-cogs mr-3 text-blue-500"></i>
+                Technical Architecture
+            </h3>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Backend Stack -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3 flex items-center">
+                        <i class="fas fa-server mr-3 text-green-500"></i>
+                        Backend Technology
+                    </h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span><strong>FastAPI</strong> - High-performance web framework for APIs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span><strong>SQLAlchemy</strong> - Powerful Python SQL toolkit and ORM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span><strong>MySQL</strong> - Robust relational database management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span><strong>Pydantic</strong> - Data validation using Python type hints</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span><strong>JWT</strong> - Secure authentication and authorization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span><strong>Uvicorn</strong> - Lightning-fast ASGI server</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Frontend Stack -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-3 flex items-center">
+                        <i class="fas fa-desktop mr-3 text-blue-500"></i>
+                        Frontend Technology
+                    </h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span><strong>HTML5</strong> - Modern semantic markup</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span><strong>Tailwind CSS</strong> - Utility-first CSS framework</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span><strong>Vanilla JavaScript</strong> - Clean, modern JavaScript</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span><strong>Google Auth</strong> - Secure OAuth2 integration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span><strong>Inter Font</strong> - Modern, legible typography</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-500 mr-3"></i>
+                            <span><strong>Responsive Design</strong> - Mobile-first approach</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Data Sources -->
+            <div class="mt-6 pt-6 border-t border-slate-700">
+                <h4 class="text-lg font-semibold text-white mb-3 flex items-center">
+                    <i class="fas fa-database mr-3 text-purple-500"></i>
+                    Data Sources & APIs
+                </h4>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-slate-900 rounded-lg p-4 border border-slate-700">
+                        <h5 class="font-semibold text-white mb-2">Stock Data Provider</h5>
+                        <p class="text-gray-400 text-sm">Indian Stock API - Real-time NSE data with comprehensive coverage of Indian equity markets.</p>
+                    </div>
+                    <div class="bg-slate-900 rounded-lg p-4 border border-slate-700">
+                        <h5 class="font-semibold text-white mb-2">News Integration</h5>
+                        <p class="text-gray-400 text-sm">GNews API - Curated financial news and market updates from reliable sources.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission & Purpose -->
+        <section class="mb-6 bg-slate-800 rounded-xl p-6">
+            <h3 class="text-xl text-white font-semibold mb-4 flex items-center">
+                <i class="fas fa-bullseye mr-3 text-blue-500"></i>
+                Our Mission & Purpose
+            </h3>
+            <div class="prose prose-invert max-w-none">
+                <div class="bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 mb-4">
+                    <h4 class="text-lg font-semibold text-white mb-2">Democratizing Financial Intelligence</h4>
+                    <p class="text-gray-300">We believe that access to comprehensive, real-time market data should not be limited to institutional traders. Our platform bridges the gap between complex financial data and everyday investors.</p>
+                </div>
+                <div class="bg-green-500/10 rounded-lg p-4 border border-green-500/20 mb-4">
+                    <h4 class="text-lg font-semibold text-white mb-2">Transparency & Trust</h4>
+                    <p class="text-gray-300">By providing transparent, reliable, and timely market intelligence, we empower our users to make informed investment decisions. Every data point, every analysis, and every insight is designed to be clear and actionable.</p>
+                </div>
+                <div class="bg-purple-500/10 rounded-lg p-4 border border-purple-500/20">
+                    <h4 class="text-lg font-semibold text-white mb-2">Innovation in Finance</h4>
+                    <p class="text-gray-300">We leverage modern technology stack and intelligent data processing to deliver a superior user experience, proving that sophisticated financial tools can be both powerful and user-friendly.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Ingestion Details -->
+        <section class="mb-6 bg-slate-800 rounded-xl p-6">
+            <h3 class="text-xl text-white font-semibold mb-4 flex items-center">
+                <i class="fas fa-clock mr-3 text-green-500"></i>
+                Data Ingestion & Processing
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700 text-center">
+                    <div class="text-3xl text-blue-500 mb-3">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Most Active</h4>
+                    <p class="text-gray-400 text-sm">Updated every 2 minutes for real-time activity tracking</p>
+                </div>
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700 text-center">
+                    <div class="text-3xl text-yellow-500 mb-3">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Trending</h4>
+                    <p class="text-gray-400 text-sm">Analyzed every 15 minutes for market trend identification</p>
+                </div>
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700 text-center">
+                    <div class="text-3xl text-purple-500 mb-3">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Rotation</h4>
+                    <p class="text-gray-400 text-sm">8 symbols every 10 minutes for comprehensive coverage</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="mb-6 bg-slate-800 rounded-xl p-6">
+            <h3 class="text-xl text-white font-semibold mb-4 flex items-center">
+                <i class="fas fa-users mr-3 text-purple-500"></i>
+                Development Team
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-slate-900 rounded-lg p-6 border border-slate-700 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-code text-white text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Full-Stack Development</h4>
+                    <p class="text-gray-400 text-sm">Backend architecture, API development, database design, and frontend implementation</p>
+                </div>
+                <div class="bg-slate-900 rounded-lg p-6 border border-slate-700 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-rocket text-white text-xl"></i>
+                    </div>
+                    <h4 class="text-lg font-semibold text-white mb-2">Product & Strategy</h4>
+                    <p class="text-gray-400 text-sm">Market research, feature planning, user experience design, and platform optimization</p>
+                </div>
+            </div>
+            <div class="mt-6 text-center">
+                <p class="text-gray-400">
+                    <i class="fas fa-heart text-red-500 mr-2"></i>
+                    Built with passion for the Indian financial markets and commitment to quality
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact & Support -->
+        <section class="bg-slate-800 rounded-xl p-6">
+            <h3 class="text-xl text-white font-semibold mb-4 flex items-center">
+                <i class="fas fa-envelope mr-3 text-blue-500"></i>
+                Get in Touch
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700 text-center">
+                    <div class="text-blue-500 text-xl mb-3">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h4 class="font-semibold text-white mb-2">Open Source</h4>
+                    <p class="text-gray-400 text-sm">Built with modern best practices and clean architecture</p>
+                </div>
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700 text-center">
+                    <div class="text-green-500 text-xl mb-3">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h4 class="font-semibold text-white mb-2">Feedback Welcome</h4>
+                    <p class="text-gray-400 text-sm">Your insights help us improve the platform continuously</p>
+                </div>
+                <div class="bg-slate-900 rounded-lg p-4 border border-slate-700 text-center">
+                    <div class="text-purple-500 text-xl mb-3">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h4 class="font-semibold text-white mb-2">Custom Solutions</h4>
+                    <p class="text-gray-400 text-sm">Scalable architecture for enterprise requirements</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-700 mt-8">
+        <div class="max-w-7xl mx-auto px-6 py-8">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Copyright & Rights -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-base">© 2025 Bharat Stocks </h4>
+                    <p class="text-gray-400 text-base">All rights reserved</p>
+                    <p class="text-gray-500 text-sm mt-1">Licensed under MIT License</p>
+                </div>
+                
+                <!-- Legal Information -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-base">⚖️ Legal Information</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-400 text-base">Privacy Policy</p>
+                        <p class="text-gray-400 text-base">Terms of Service</p>
+                        <p class="text-gray-400 text-base">MIT License</p>
+                    </div>
+                </div>
+                
+                <!-- Data Attribution -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-base">Data Sources</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-400 text-sm">
+                            <a href="https://indianapi.in/" target="_blank" class="hover:text-blue-400 transition-colors">Indian Stock API</a> - Market data
+                        </p>
+                        <p class="text-gray-400 text-sm">
+                            <a href="https://gnews.io/" target="_blank" class="hover:text-blue-400 transition-colors">GNews API</a> - Financial news
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Contact Information -->
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-base">📧 Contact Information</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-400 text-base">Support & Queries</p>
+                        <p class="text-gray-400 text-base">Business Inquiries</p>
+                        <p class="text-gray-400 text-base">Technical Support</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-slate-800 mt-8 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-gray-400 text-base mb-4 md:mb-0">
+                        Empowering Indian Stock Market Analysis
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-gray-500 text-base">v1.0.0</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                            <span class="text-gray-400 text-base">Live Data Active</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+        // Theme init
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        document.body.className = savedTheme === 'dark' ? 'dark-mode' : 'light-mode';
+        const themeIcon = document.getElementById('themeIcon');
+        if (themeIcon) themeIcon.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+        const originalToggle = window.toggleTheme;
+        window.toggleTheme = function(){
+          if (document.body.classList.contains('dark-mode')){
+            document.body.classList.remove('dark-mode'); document.body.classList.add('light-mode'); localStorage.setItem('theme','light');
+          } else { document.body.classList.remove('light-mode'); document.body.classList.add('dark-mode'); localStorage.setItem('theme','dark'); }
+          if (themeIcon) themeIcon.textContent = document.body.classList.contains('dark-mode') ? '🌙' : '☀️';
+          if (typeof originalToggle==='function') try{ originalToggle(); }catch(e){}
+        };
+        // Profile dropdown
+        const user = Auth.getUser();
+        const display = (user && (user.full_name || user.username || user.email)) || 'User';
+        const initial = (display.trim()[0] || 'U').toUpperCase();
+        const idEl = document.getElementById('profileIdentity'); if (idEl) idEl.textContent = display;
+        const avEl = document.getElementById('avatarInitial'); if (avEl) avEl.textContent = initial;
+        const btn = document.getElementById('profileBtn'); const menu = document.getElementById('profileMenu'); const container = document.getElementById('profileContainer');
+        btn && btn.addEventListener('click', (e)=>{ e.stopPropagation(); menu && menu.classList.toggle('hidden'); });
+        document.addEventListener('click', (e)=>{ if(container && !container.contains(e.target)) { menu && menu.classList.add('hidden'); } });
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape'){ menu && menu.classList.add('hidden'); } });
+        const lo = document.getElementById('logoutBtn'); lo && lo.addEventListener('click', ()=> Auth.logout());
+
+        // Show Admin nav only for admin role
+        try {
+          console.log('Current user:', user); // Debug log
+          if (user && (user.role === 'admin' || user.role === 'ADMIN')) {
+            console.log('User is admin, showing admin link'); // Debug log
+            const link = document.getElementById('adminLink');
+            if (link) link.classList.remove('hidden');
+            const adminLinks = document.querySelectorAll('.admin-only');
+            adminLinks.forEach(link => link.classList.remove('hidden'));
+          }
+        } catch(e) {
+          console.error('Error showing admin link:', e);
+        }
+      });
+    </script>
+</body>
+</html>
