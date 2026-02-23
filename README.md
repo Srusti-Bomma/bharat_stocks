@@ -852,3 +852,5 @@ Key requirements:
 ---
 
 This expanded README can be directly adapted into a project report: it covers architecture, technology stack, data flow, database design (conceptually), APIs, frontend pages, security, deployment, troubleshooting, and roadmap.
+#   B h a r a t _   S t o c k s   P r o j e c t  
+ 
